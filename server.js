@@ -1,5 +1,6 @@
-var app = require('express')();
-var http = require('http').Server(app);
+express = require('express');
+var app = express();
+
 
 app.get('/', function (req, res) {
 	res.sendfile( __dirname + '/front/index.html');
@@ -52,7 +53,7 @@ app.get('/res/banner.png', function (req, res){
 
 
 
-var server = http.listen(3000, function () {
+var server = app.listen(process.env.PORT||3000, function () {
 
   var host = server.address().address;
   var port = server.address().port;
