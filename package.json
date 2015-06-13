@@ -1,0 +1,22 @@
+{
+  "name": "GamesPage",
+  "version": "0.0.0",
+  "description": "it is games page",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oql/GamesPage.git"
+  },
+  "author": "ahesm",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/oql/GamesPage/issues"
+  }
+}
