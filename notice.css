@@ -1,0 +1,86 @@
+@charset utf-8
+
+
+section{
+	height: 600px;
+}
+
+#noticebox{
+	//border: 1px solid black;
+	margin: 0px auto;
+	transition: all 1s;
+}
+
+#noticebox ul li{
+	padding: none;
+	height: 25px;
+}
+
+#noticebox ul  li:nth-child(2n){
+	border: 2px solid lightgray;
+	border-right: none;
+	background: lightgray;
+	color :black;
+}
+#noticebox ul  li:nth-child(2n+1){
+	border: 2px solid white;
+	border-right: none;
+	background: white;
+	color :black;
+}
+
+#noticebox  div {
+	box-sizing: border-box;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#noticebox ul > li > div:first-child{
+	box-sizing: border-box;
+	padding-left: 10px;
+	width: 30%;
+	height: 22px;
+}
+
+#noticebox ul > li > div:last-child{
+	box-sizing: border-box;
+	width: 70%;
+	height: 25px;
+	text-align: right;
+}
+
+#noticebox ul > li > div:last-child > div{
+	box-sizing: border-box;
+	width: 30px;
+	height: 25px;
+	padding-left: 5px;
+	transition: width 0.5s;
+	text-align: left;
+}
+
+#noticebox ul > li:nth-child(2n) > div:last-child > div{
+	background: white;
+	color: lightgray;
+}
+
+#noticebox ul > li:nth-child(2n+1) > div:last-child > div{
+	background: lightgray;
+	color: white;
+}
+
+#nboxindex {
+	width: 280px;
+	height: 25px;
+	margin: 10px auto;
+}
+
+#nboxindex li {
+	float: left;
+	padding-left: 15px;
+}
+
+#noticebox2 {
+	position: absolute;
+	width: 860px;
+	height: 464px;
+}

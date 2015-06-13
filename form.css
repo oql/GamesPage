@@ -1,0 +1,279 @@
+@charset utf-8
+
+
+@-webkit-keyframes bounceIn{
+	 0% {
+	   opacity: 0;
+	   -webkit-transform: scale3d(.3, .3, .3);
+	   transform: scale3d(.3, .3, .3);
+	 }
+
+	10% {
+		-webkit-transform: scale3d(.6, .6, .6);
+	    transform: scale3d(.6, .6, .6);
+	}
+
+	20% {
+	    -webkit-transform: scale3d(.8,.8, .8);
+	    transform: scale3d(.8,.8,.8);
+	}
+
+	30% {
+	    -webkit-transform: scale3d(1.1,1.1,1.1);
+	    transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+	    -webkit-transform: scale3d(.9, .9, .9);
+	    transform: scale3d(.9, .9, .9);
+	}
+
+	60% {
+	    opacity: 1;
+	    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+	    transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+	    -webkit-transform: scale3d(.999, .999, .999);
+	    transform: scale3d(.999, .999, .999);
+	}
+
+	100% {
+	    opacity: 1;
+	    -webkit-transform: scale3d(1, 1, 1);
+	    transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes bounceIn{
+	 0% {
+	   opacity: 0;
+	   -webkit-transform: scale3d(.3, .3, .3);
+	   transform: scale3d(.3, .3, .3);
+	 }
+
+	10% {
+		-webkit-transform: scale3d(.6, .6, .6);
+	    transform: scale3d(.6, .6, .6);
+	}
+
+	20% {
+	    -webkit-transform: scale3d(.8,.8, .8);
+	    transform: scale3d(.8,.8,.8);
+	}
+
+	30% {
+	    -webkit-transform: scale3d(1.1,1.1,1.1);
+	    transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+	    -webkit-transform: scale3d(.9, .9, .9);
+	    transform: scale3d(.9, .9, .9);
+	}
+
+	60% {
+	    opacity: 1;
+	    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+	    transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+	    -webkit-transform: scale3d(.999, .999, .999);
+	    transform: scale3d(.999, .999, .999);
+	}
+
+	100% {
+	    opacity: 1;
+	    -webkit-transform: scale3d(1, 1, 1);
+	    transform: scale3d(1, 1, 1);
+	}
+}
+
+.bounceIn{
+	-webkit-animation: bounceIn 1s;
+	animation: bounceIn 1s;
+}
+
+
+
+*    { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+div  { margin: 0; padding: 0; }
+ul   { margin: 0; padding: 0; }
+li   { margin: 0; padding: 0; list-style-type: none; }
+a    { text-decoration: none; }
+img  { border: 0; }
+
+.noselect {
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.nocursor {
+	cursor: default;
+}
+
+.nodrag {
+	-webkit-user-select: none;
+}
+
+.pcursor {
+	cursor: pointer;
+}
+
+#sidemenu{
+	position: fixed;
+	float: left;
+	margin-top: 100px;
+}
+
+#sidemenu #sideback {
+	width: 30px;
+}
+
+#sidemenu #sideback li {
+	margin-top: 3px;
+	height: 50px;
+	width: 100%;
+	background-color: black;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+
+	padding: 10px 15px 12px 0px;
+	box-sizing: border-box;
+	font-size: 27px;
+	color: rgba(0,0,0,0);
+    text-align: right;
+}
+
+#sidemenu #sideback li:hover {
+	width: 200px;
+	color: white;
+}
+
+#sidemenu #sideback .sidetext{
+	visibility: hidden;
+}
+
+
+header{
+	border: 1px solid black;
+	border-bottom: none;
+	width: 900px;
+	height: 210px;
+	margin: 0px auto;
+}
+
+nav{
+	width: 900px;
+	height: 30px;
+	margin: 0px auto;
+	border: 1px solid black;
+	border-top: none;
+	border-bottom: none;
+}
+
+
+nav ul li{
+	float: left;
+	width: 180px;
+	height: 30px;
+	text-align: center;
+	padding-top: 5px;
+	color: white;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	background: black;
+}
+
+nav ul li:hover{
+	background: white;
+	color: black;
+	font-weight: bold;
+}
+
+
+#contents{
+	border: 1px solid;
+	width: 900px;
+	margin: 0px auto;
+}
+
+#contents section{
+	padding: 0px 20px 20px 20px;
+}
+
+
+#contents > hr {
+	border:none;
+	height: 1px;
+	background:black;
+}
+
+footer {
+	margin: 10px auto;
+	border: 1px solid;
+	width: 900px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#login{
+	text-align: right;
+}
+
+
+#login div{
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #000;
+	background: black;
+	color: white;
+}
+
+#login div:active{
+	border: 1px inset #fff;
+}
+
+
+#loginlayout{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(128,128,128,0.5);
+	visibility: hidden;
+}
+
+#loginlayout #loginwindow{
+	visibility: hidden;
+	margin: 0 auto;
+	width: 600px;
+	border: 1px solid black;
+	height: 300px;
+	background: white;
+	box-shadow: 3px 3px 5px black;
+}
+
+#loginlayout #loginwindow #loginimage{
+	margin-bottom: 20px;
+}
+
+
+#loginlayout #loginwindow div{
+	text-align: center;
+}
+
+#loginlayout #loginwindow #exit{
+	text-align: right;
+	padding-right: 5px;
+}
+
+#loginlayout #loginwindow #exit > div{
+	display: inline-block;
+	width:10px;
+}
+
