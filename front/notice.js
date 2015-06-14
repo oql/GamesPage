@@ -7,7 +7,7 @@ for(i=0;i<101;i++){
 	contents[i].writer = "writer"+i;
 	contents[i].date = "2014.5.21";
 }
-$(window).load(function(){
+$(document).ready(function(){
 	console.log($("#noticebox ul").children().length);
 	for(i=1;i <= $("#noticebox ul").children().length;i++){
 		$("#noticebox ul li:nth-child("+i+")").mouseenter(function(){

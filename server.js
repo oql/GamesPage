@@ -194,6 +194,29 @@ function genDoc(data){
 	'	</div>' +
 	'</div>' +
 	'</body>' +
+	// '<script>' +
+	// '$(document).ready(function(){' +
+	// '	console.log($("#noticebox ul").children().length);';
+	// for(i=1;i <= data.length; i++){
+	// 	response +=
+	//
+	// '		$("#noticebox ul li:nth-child("+i+")").mouseenter(function(){' +
+	// '			var text = ' + data[i].nick + "  -  " + data[i].date + ';' +
+	// '			$(this).children("div:last-child").children("div").css("padding-left", "16px" );' +
+	// '			$(this).children("div:last-child").children("div").css("color","black");' +
+	// '			$(this).children("div:last-child").children("div").css("width",(text.length*8) + "px");' +
+	// '			$(this).children("div:last-child").children("div").text(' + data[i].nick + "  -  " + data[i].date + ');' +
+	// '		});' +
+	// '		$("#noticebox ul li:nth-child("+i+")").mouseleave(function(){' +
+	// '			if(($(this).index()-1)%2==0) $(this).children("div:last-child").children("div").css("color","lightgray");' +
+	// '			else $(this).children("div:last-child").children("div").css("color","white");' +
+	// '			$(this).children("div:last-child").children("div").css("padding-left","5px");' +
+	// '			$(this).children("div:last-child").children("div").css("width","30px");' +
+	// '			$(this).children("div:last-child").children("div").text("◀");' +
+	// '		});'
+	// 	}
+	// '});' +
+	// '</script>'+
 	'</html>';
 	return response;
 }
