@@ -7,6 +7,7 @@ section{
 
 #noticebox{
 	//border: 1px solid black;
+	white-space: nowrap;
 	margin: 0px auto;
 	transition: all 1s;
 }
