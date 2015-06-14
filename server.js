@@ -1,5 +1,7 @@
 express = require('express');
+var bodyParser = require("body-parser");
 var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.get('/', function (req, res) {
@@ -93,16 +95,17 @@ connection.connect(function(err){
 
 app.post('/saveArticle',function(req,res){
     var user = {
-		'title':req.body.title,
-        'article':req.body.article
+		nick:req.body.user,
+		title:req.body.title,
+        text:req.body.article
 	};
 
-    var query = connection.query('insert into users set ?',user,function(err,result){
+    var query = connection.query('insert into doc set ?', user ,function(err,result){
         if (err) {
             console.error(err);
             throw err;
         }
-        res.send(200,'success');
+		res.redirect('/');
     });
 });
 
