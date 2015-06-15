@@ -52,7 +52,7 @@ app.get('/res/banner.png', function (req, res){
 
 
 
-var server = http.listen(3000, function () {
+var server = http.listen(process.env.PORT||3000, function () {
 
   var host = server.address().address;
   var port = server.address().port;
