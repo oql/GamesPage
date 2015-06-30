@@ -51,7 +51,7 @@ app.get('/res/banner.png', function (req, res){
 	res.sendfile( __dirname + '/front/res/banner.png');
 });
 
-var server = app.listen(process.env.PORT||8080, function () {
+var server = app.listen(80, function () {
 
   var host = server.address().address;
   var port = server.address().port;
