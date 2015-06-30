@@ -58,8 +58,8 @@ $(document).ready(function(){
 				$("#nboxindex ul li:nth-child("+j+")").click(function(){
 					pageNow = $(this).text() - 1;
 					for(k=1;k<=15;k++){
-						var txt = pages[pageNow][j].number + space + pages[pageNow][j].cname;
-						$("#noticebox ul > li:nth-child(" + (k+1) + ")").text(txt);
+						var txt = pages[pageNow][k-1].number + space + pages[pageNow][k-1].cname;
+						$("#noticebox ul > li:nth-child(" + (k+1) + ") .pcursor").html(txt);
 						//$("<div class='pcursor'>"+txt+"</div>").insertBefore($("#noticebox ul > li:nth-child(" + (j+2) + ") > div:first-child"));
 					}
 				});
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 	for(i=1;i<=$("#noticebox ul").children().length;i++){
 		$("#noticebox ul li:nth-child("+i+")").mouseenter(function(){
-			var text = contents[$(this).index()-1].writer + "  -  " + contents[$(this).index()-1].date;
+			var text = contents[pageNow*15 + $(this).index()-1].writer + "  -  " + contents[pageNow*15 + $(this).index()-1].date;
 
 			$(this).children("div:last-child").children("div").css("padding-left", "16px" );
 			$(this).children("div:last-child").children("div").css("color","black");
