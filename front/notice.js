@@ -9,7 +9,7 @@ var pageNow = 0;
 
 var pageindexNow = 0;
 
-for(i=0;i<30;i++){
+for(i=0;i<300;i++){
 	contents[i] = [];
 	contents[i].number = "";
 	contents[i].cname = "cname"+i;
@@ -36,8 +36,8 @@ $(document).ready(function(){
 	}
 
 
-	var indexcount = Math.floor(contents.length/9);
-	var lastindex = contents.length%9;
+	var indexcount = Math.floor(contents.length/10);
+	var lastindex = contents.length%10;
 	console.log(indexcount);
 	console.log(lastindex);
 	$("#nboxindex ul li:first-child").click(function(){
@@ -51,10 +51,10 @@ $(document).ready(function(){
 		if(pageindexNow%10==1)$("#nboxindex ul").css("width",$("#nboxindex ul").width() + 100 +"px");
 	});
 	for(i=1;i<=indexcount;i++){
-		var nloop = (i==indexcount)?lastindex:10;
-		for(j=1;j<=nloop;j++){
-			if(i==1) $("<li class='pcursor'>"+ j +"</li>").insertBefore("#nboxindex ul li:last-child");
-			if(j>1&&j<nloop){
+		var nloop = (i<indexcount)?10:lastindex;
+		for(j=1;j<=nloop+1;j++){
+			if(i==1&&j<=nloop) $("<li class='pcursor'>"+ j +"</li>").insertBefore("#nboxindex ul li:last-child");
+			if(j>1&&j<=nloop+1){
 				$("#nboxindex ul li:nth-child("+j+")").click(function(){
 					pageNow = $(this).text() - 1;
 					for(k=1;k<=15;k++){
