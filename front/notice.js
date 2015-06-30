@@ -35,26 +35,37 @@ $(document).ready(function(){
 			+ contents[i].cname + "</div><div><div>◀</div></div></li>");
 	}
 
-/*
-	var indexcount = contents.length/9;
-	var lastindex = contents.length%9;
 
-	for(i=0;i<=indexcount;i++){
-		for(j=1;j<=(i==indexcount)?lastindex:9;j++){
-			$("<li class='pcursor'>"+ j +"</li>").insertBefore("#nboxindex ul li:last-child");
-			if(j>1&&j<=(i==indexcount)?lastindex:9){
+	var indexcount = Math.floor(contents.length/9);
+	var lastindex = contents.length%9;
+	console.log(indexcount);
+	console.log(lastindex);
+	$("#nboxindex ul li:first-child").click(function(){
+		if(pageindexNow>0)pageindexNow--; else return;
+		for(i=1;i<=10;i++) $("#nboxindex ul li:nth-child("+(i+1)+")").text(pageindexNow*10+i); 
+		if(pageindexNow%10==0)$("#nboxindex ul").css("width",$("#nboxindex ul").width() - 100 + "px");
+	});
+	$("#nboxindex ul li:last-child").click(function(){
+		if(pageindexNow<indexcount-1)pageindexNow++; else return;
+		for(i=1;i<=10;i++) $("#nboxindex ul li:nth-child("+(i+1)+")").text(pageindexNow*10+i); 
+		if(pageindexNow%10==1)$("#nboxindex ul").css("width",$("#nboxindex ul").width() + 100 +"px");
+	});
+	for(i=1;i<=indexcount;i++){
+		var nloop = (i==indexcount)?lastindex:10;
+		for(j=1;j<=nloop;j++){
+			if(i==1) $("<li class='pcursor'>"+ j +"</li>").insertBefore("#nboxindex ul li:last-child");
+			if(j>1&&j<nloop){
 				$("#nboxindex ul li:nth-child("+j+")").click(function(){
 					pageNow = $(this).text() - 1;
-
-					for(k=0;k<15;k++){
+					for(k=1;k<=15;k++){
 						var txt = pages[pageNow][j].number + space + pages[pageNow][j].cname;
-						$("#noticebox ul > li:nth-child(" + (k+2) + ")").text(txt);
+						$("#noticebox ul > li:nth-child(" + (k+1) + ")").text(txt);
 						//$("<div class='pcursor'>"+txt+"</div>").insertBefore($("#noticebox ul > li:nth-child(" + (j+2) + ") > div:first-child"));
 					}
 				});
 			}
 		}
-	}*/
+	 }
 
 	for(i=1;i<=$("#noticebox ul").children().length;i++){
 		$("#noticebox ul li:nth-child("+i+")").mouseenter(function(){

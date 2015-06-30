@@ -1,5 +1,6 @@
-var app = require('express')();
-var http = require('http').Server(app);
+express = require('express');
+var app = express();
+
 
 app.get('/', function (req, res) {
 	res.sendfile( __dirname + '/front/index.html');
@@ -50,9 +51,7 @@ app.get('/res/banner.png', function (req, res){
 	res.sendfile( __dirname + '/front/res/banner.png');
 });
 
-
-
-var server = http.listen(process.env.PORT||3000, function () {
+var server = app.listen(process.env.PORT||8080, function () {
 
   var host = server.address().address;
   var port = server.address().port;
@@ -60,4 +59,6 @@ var server = http.listen(process.env.PORT||3000, function () {
   console.log('Example app listening at http://%s:%s', host, port);
 
 });
+
+
 
