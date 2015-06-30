@@ -159,7 +159,7 @@ img  { border: 0; }
 
 
 header{
-	border: 1px solid black;
+//	border: 1px solid black;
 	border-bottom: none;
 	width: 900px;
 	height: 210px;
@@ -170,7 +170,7 @@ nav{
 	width: 900px;
 	height: 30px;
 	margin: 0px auto;
-	border: 1px solid black;
+//	border: 1px solid black;
 	border-top: none;
 	border-bottom: none;
 }
@@ -196,7 +196,7 @@ nav ul li:hover{
 
 
 #contents{
-	border: 1px solid;
+//	border: 1px solid black;
 	width: 900px;
 	margin: 0px auto;
 }

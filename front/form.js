@@ -3,6 +3,9 @@ $(document).ready(function(){
 		$("#sidemenu #sideback li:nth-of-type("+i+")").hover(function(){
 			$(this).children("div").css("visibility","visible");
 		});
+		$("#sidemenu #sideback li:nth-of-type("+i+")").click(function(){
+			$(window).scrollTo($("#s"+($(this).index()+1)),300,"offset:'50'");
+		});
 		
 		$("#sidemenu #sideback li:nth-of-type("+i+")").mouseleave(function(){
 			$(this).children("div").css("visibility","hidden");
