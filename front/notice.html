@@ -13,10 +13,10 @@
 <div id="all">
 	<div id="sidemenu">
 		<ul id="sideback">
-			<li><div class="nodrag, pcursor">이곳은</div></li>
-			<li><div class="nodrag, pcursor">게임즈</div></li>
-			<li><div class="nodrag, pcursor">공지사항</div></li>
-			<li><div class="nodrag, pcursor">입니다.</div></li>
+			<li class="noselect"><div class="sidetext">이곳은</div></li>
+			<li class="noselect"><div class="sidetext">게임즈</div></li>
+			<li class="noselect"><div class="sidetext">공지사항</div></li>
+			<li class="noselect"><div class="sidetext">입니다.</div></li>
 		</ul>
 	</div>
 	<header> 
@@ -59,10 +59,11 @@
 			<a href="#"><div id="exit" class="nodrag"><div>X</div></div></a>
 			<div id="loginimage"><img src="/res/login.png"></div>
 			<div>
-				*보안을 위해 아이디와 비밀번호를 10만 글자까지 입력가능하게 했습니다. <br>
+				*보안을 위해 아이디와 비밀번호를 10만 글자까지 입력가능합니다. <br>
 				<form method="POST">
-					<input type="text" name="id" size="70" maxlength="100000" placeholder="아이디"> <br>
-					<input type="password" name="password" size="70" maxlength="100000" placeholder="비밀번호"> <br>
+					<input type="text" name="id" maxlength="100000" placeholder="아이디"
+					style="width:523px;"> <br>
+					<input type="password" name="password" maxlength="100000" placeholder="비밀번호" style="width:523px;"> <br>
 					<input type="submit" value="로그인/가입" style="width:523px;margin-right:5px;">
 				</form>
 			</div>	
