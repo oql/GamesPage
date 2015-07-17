@@ -1,7 +1,14 @@
+var selectedLabel;
+var timerId;
+
 $(document).ready(function(){
 	for(i=1;i<=$("#sidemenu #sideback").children().length;i++){
-		$("#sidemenu #sideback li:nth-of-type("+i+")").hover(function(){
+		$("#sidemenu #sideback li:nth-of-type("+i+")").mouseenter(function(){
+			selectedLabel = $(this);
 			$(this).children("div").css("visibility","visible");
+			// timerId = setTimeout(function(){
+			// 	selectedLabel.children("div").css("visibility","visible");
+			// },150);
 		});
 		$("#sidemenu #sideback li:nth-of-type("+i+")").click(function(){
 			$(window).scrollTo($("#s"+($(this).index()+1)),300,"offset:'50'");

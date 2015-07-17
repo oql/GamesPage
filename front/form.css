@@ -145,8 +145,8 @@ img  { border: 0; }
 	height: 50px;
 	width: 100%;
 	background-color: #102030;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
 
 	padding: 4px 15px 12px 0px;
 	box-sizing: border-box;
@@ -160,6 +160,8 @@ img  { border: 0; }
 #sidemenu #sideback li:hover {
 	width: 200px;
 	color: #fff;
+	background-color:#304050;
+	overflow: hidden;
 }
 
 #sidemenu #sideback .sidetext{
