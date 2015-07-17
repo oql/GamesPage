@@ -1,7 +1,8 @@
 @charset utf-8
 
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://notosanskr-hestia.s3-website-ap-northeast-1.amazonaws.com/stylesheets/NotoSansKR-Hestia.css);
+
+*{font-family: 'Noto Sans Korean',sans-serif;}
 
 @-webkit-keyframes bounceIn{
 	 0% {
@@ -92,7 +93,6 @@
 	    transform: scale3d(1, 1, 1);
 	}
 }
-
 .bounceIn{
 	-webkit-animation: bounceIn 1s;
 	animation: bounceIn 1s;
@@ -100,9 +100,9 @@
 
 
 
-*    { margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif; }
-body { margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif; }
-div  { margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif; }
+*    { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+div  { margin: 0; padding: 0; }
 ul   { margin: 0; padding: 0; }
 li   { margin: 0; padding: 0; list-style-type: none; }
 a    { text-decoration: none; }
@@ -139,7 +139,7 @@ img  { border: 0; }
 	margin-top: 3px;
 	height: 50px;
 	width: 100%;
-	background-color: black;
+	background-color: #101020;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 
@@ -152,7 +152,7 @@ img  { border: 0; }
 
 #sidemenu #sideback li:hover {
 	width: 200px;
-	color: white;
+	color: #fff;
 }
 
 #sidemenu #sideback .sidetext{
@@ -182,24 +182,25 @@ nav ul li{
 	height: 30px;
 	text-align: center;
 	padding-top: 5px;
-	color: white;
+	color: #fff;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	background: black;
+	background: #101020;
 }
 
 nav ul li:hover{
-	background: white;
-	color: black;
+	background: #eee;
+	color: #101020;
 	font-weight: bold;
 }
 
 
 #contents{
-//	border: 1px solid black;
+//	border: 1px solid #101020;
 	width: 900px;
 	margin: 0px auto;
 }
+
 
 #contents section{
 	padding: 0px 20px 20px 20px;
@@ -209,33 +210,17 @@ nav ul li:hover{
 #contents > hr {
 	border:none;
 	height: 1px;
-	background:black;
+	background:#101020;
 }
+
+
 
 footer {
 	margin: 10px auto;
 	border:1px solid;
 	width: 900px;
 	text-align: center;
-	font-size: 12px;
-}
-
-#login{
-	text-align: right;
-}
-
-
-#login div{
-	width: 100px;
-	text-align: center;
-	display: inline-block;
-	border: 1px solid #000;
-	background: black;
-	color: white;
-}
-
-#login div:active{
-	border: 1px inset #fff;
+	font-size: 13px;
 }
 
 
@@ -252,10 +237,10 @@ footer {
 	visibility: hidden;
 	margin: 0 auto;
 	width: 600px;
-	border: 1px solid black;
+	border: 1px solid #101020;
 	height: 300px;
-	background: white;
-	box-shadow: 3px 3px 5px black;
+	background: #fff;
+	box-shadow: 3px 3px 5px #101020;
 }
 
 #loginlayout #loginwindow #loginimage{
@@ -277,3 +262,39 @@ footer {
 	width:10px;
 }
 
+
+input[type="submit"]{
+	background: #fff;
+	border: 1px solid #101020;
+}
+
+
+input[type="submit"]:active{
+	background: #eee;
+}
+
+#topmenu{
+	width: 100%;
+	height: 20px;
+	background-color: #fff;
+}
+
+#login{
+	text-align: right;
+}
+
+#login div{
+	width: 100px;
+	height: 15px;
+	font-size: 14px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: #101020;
+	padding-bottom: 5px;
+}
+
+#login div:active{
+	border: 1px inset #101020;
+}

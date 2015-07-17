@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link href='http://notosanskr-hestia.s3-website-ap-northeast-1.amazonaws.com/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/form.css"/>
 	<link rel="stylesheet" type="text/css" href="/index.css"/>
 	<script src="/jquery"></script>
@@ -11,6 +12,7 @@
 </head>
 <body>
 <div id="all">
+	<div id="login" class="pcursor"><div class="nodrag">로그이ㄴ</div></div>
 	<div id="sidemenu">
 		<ul id="sideback">
 			<li class="noselect"><div class="sidetext">안녕하세요</div></li>
@@ -20,8 +22,7 @@
 		</ul>
 	</div>
 	<header> 
-		<div id="login" class="pcursor"><div class="nodrag">로그이ㄴ</div></div>
-		<div><a href="/"><img class="nodrag" src="/res/logo.png"></a></div>
+		<div style="width: 100%;"><a href="/"><img class="nodrag" src="/res/logo.png"></a></div>
 	</header>
 	<nav>
 		<ul class="noselect">
@@ -35,7 +36,6 @@
 	<div id="contents">
 		<section>	
 			<img src="/res/banner.png" width="880px">
-			<!-- 이 페이지는 게임즈의 변태같은 구성원들이 모이는 변태같은 곳이라 배너도 적당히 만듭니다. -->
 		</section>
 	</div>
 	<footer>
@@ -49,9 +49,9 @@
 			<div>
 				*보안을 위해 아이디와 비밀번호를 10만 글자까지 입력가능하게 했습니다. <br>
 				<form method="POST">
-					<input type="text" name="id" size="77" maxlength="100000" placeholder="아이디"> <br>
-					<input type="password" name="password" size="77" maxlength="100000" placeholder="비밀번호"> <br>
-					<input type="submit" value="로그인/가입" style="width:523px; margin-right:5px;">
+					<input type="text" name="id" maxlength="100000" placeholder="아이디" style="width: 500px;"> <br>
+					<input type="password" name="password" maxlength="100000" placeholder="비밀번호" style="width: 500px"> <br>
+					<input type="submit" value="로그인/가입" style="width:500px; margin-right:5px;">
 				</form>
 			</div>	
 		</div>

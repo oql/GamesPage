@@ -1,17 +1,7 @@
 @charset utf-8
 
-input[type="submit"]{
-	background: white;
-	border: 1px solid black;
-}
-
-
-input[type="submit"]:active{
-	background: #ccc;
-}
 
 #contents section{
 	text-align: center;
 	padding: 0;
 }
-

@@ -18,6 +18,10 @@ app.get('/intro', function (req, res) {
 	res.sendfile( __dirname + '/front/intro.html');
 });
 
+app.get('/index.css', function (req, res){
+	res.sendfile( __dirname + '/front/index.css');
+});
+
 app.get('/intro.js', function (req, res) {
 	res.sendfile( __dirname + '/front/intro.js');
 });
