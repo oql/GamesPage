@@ -109,7 +109,12 @@ a    { text-decoration: none; }
 img  { border: 0; }
 
 .noselect {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     cursor: default;
 }
 
@@ -191,7 +196,6 @@ nav ul li{
 nav ul li:hover{
 	background: #eee;
 	color: #101020;
-	font-weight: bold;
 }
 
 
@@ -297,4 +301,35 @@ input[type="submit"]:active{
 
 #login div:active{
 	border: 1px inset #101020;
+}
+
+
+
+::-webkit-scrollbar {
+	float:right;
+	width: 3px; 
+	border: 3px solid #fff;
+}
+
+/*::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment{
+	height: 5px;
+}*/
+
+::-webkit-scrollbar-track {
+	background: #eee;
+}
+::-webkit-scrollbar-thumb {
+	background: #101020;
+}
+
+/*ie*/
+html {
+	scrollbar-3dLight-Color: #000;
+	scrollbar-arrow-color: #fff;
+	scrollbar-base-color: #fff;
+	scrollbar-Face-Color: #000;
+    scrollbar-Track-Color: #fff;
+    scrollbar-DarkShadow-Color: #000; 
+    scrollbar-Highlight-Color: #000; 
+	scrollbar-Shadow-Color: #000;
 }
