@@ -1,8 +1,12 @@
 @charset utf-8
 
+<<<<<<< HEAD
 @import url(http://notosanskr-hestia.s3-website-ap-northeast-1.amazonaws.com/stylesheets/NotoSansKR-Hestia.css);
 
 *{font-family: 'Noto Sans Korean',sans-serif;}
+=======
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+>>>>>>> 40bf0b1dcca9052ab7d51b84c2a13322cb81ea6b
 
 @-webkit-keyframes bounceIn{
 	 0% {
@@ -100,9 +104,15 @@
 
 
 
+<<<<<<< HEAD
 *    { margin: 0; padding: 0; }
 body { margin: 0; padding: 0; }
 div  { margin: 0; padding: 0; }
+=======
+*    { margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif; -moz-font-family: 'Nanum Gothic', sans-serif; }
+body { margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif; }
+div  { margin: 0; padding: 0;  }
+>>>>>>> 40bf0b1dcca9052ab7d51b84c2a13322cb81ea6b
 ul   { margin: 0; padding: 0; }
 li   { margin: 0; padding: 0; list-style-type: none; }
 a    { text-decoration: none; }
@@ -176,6 +186,10 @@ nav{
 	width: 900px;
 	height: 30px;
 	margin: 0px auto;
+<<<<<<< HEAD
+	border: 1px solid black;
+=======
+>>>>>>> b50451c72be6eaf3b2c5126e3f95f90fcd7d4e9b
 	border-top: none;
 	border-bottom: none;
 }
@@ -200,7 +214,11 @@ nav ul li:hover{
 
 
 #contents{
+<<<<<<< HEAD
 //	border: 1px solid #101020;
+=======
+//	border: 1px solid;
+>>>>>>> 40bf0b1dcca9052ab7d51b84c2a13322cb81ea6b
 	width: 900px;
 	margin: 0px auto;
 }
