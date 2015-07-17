@@ -26,7 +26,7 @@ $(document).ready(function(){
  		$("#loginwindow").css("margin-top",$(window).height()/2 - $("#loginwindow").height()/2);
  	});
 
- 	$("#exit > div").click(function(){
+ 	$("#exit div").click(function(){
  		$("#loginlayout").fadeOut(500);
  	});
 });
