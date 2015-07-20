@@ -86,9 +86,10 @@ $(document).ready(function(){
 		$("#noticebox ul li:nth-child("+i+")").mouseenter(function(){
 			var text = contents[pageNow*15 + $(this).index()-1].writer + "  -  " + contents[pageNow*15 + $(this).index()-1].date;
 
+			// $(this).children("div:last-child").children("div").css("text-align", "center" );
 			$(this).children("div:last-child").children("div").css("padding-left", "16px" );
 			$(this).children("div:last-child").children("div").css("color","black");
-			$(this).children("div:last-child").children("div").css("width",(text.length*8) + "px");
+			$(this).children("div:last-child").children("div").css("width", text.length * 8 + "px");
 			$(this).children("div:last-child").children("div").text(text);
 		});
 

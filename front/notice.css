@@ -59,6 +59,20 @@ section{
 	text-align: left;
 }
 
+/*
+#noticebox ul > li:nth-of-type(2){
+	border-radius: 10px 0 0 0;
+}
+
+#noticebox ul > li:last-of-type{
+	border-radius: 0 0 0 10px;
+}
+
+#noticebox ul >li{
+	border-radius: 10px 0 0 10px;
+}*/
+
+
 #noticebox ul > li:nth-child(2n) > div:last-child > div{
 	background: white;
 	color: lightgray;

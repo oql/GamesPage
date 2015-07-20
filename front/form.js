@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$("#sidemenu #sideback li:nth-of-type("+i+")").mouseenter(function(){
 			$(this).children("div").css("visibility","visible");
 		});
+		
 		$("#sidemenu #sideback li:nth-of-type("+i+")").click(function(){
 			$(window).scrollTo($("#s"+($(this).index()+1)),800,{ duration: 'slow', easing:'easeOutQuart'});
 		});
