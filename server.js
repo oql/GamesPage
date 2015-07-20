@@ -55,6 +55,14 @@ app.get('/res/banner.png', function (req, res){
 	res.sendfile( __dirname + '/front/res/banner.png');
 });
 
+app.get('/jquery-ui.css', function (req, res){
+	re.sendfile( __dirname + '/font/jquery-ui.min.css');
+});
+
+app.get('/jquery-ui.js', function (req, res){
+	res.sendfile( __dirname + '/front/jquery-ui.min.js');
+});
+
 var server = app.listen(80, function () {
 
   var host = server.address().address;
