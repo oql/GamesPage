@@ -4,7 +4,9 @@
   "description": "it is games page",
   "main": "server.js",
   "dependencies": {
-    "express": "~4.12.4"
+    "express": "~4.12.4",
+    "mysql": "^2.8.0",
+    "sequelize": "^3.4.1"
   },
   "devDependencies": {},
   "scripts": {
