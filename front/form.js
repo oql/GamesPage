@@ -31,5 +31,14 @@ $(document).ready(function(){
  		$("#loginwindow").removeClass("bounceIn");
  		$("#loginlayout").fadeOut(500);
  	});
+
+ 	$.ajax({
+ 		type: 'POST',
+ 		url: '/login',
+ 		data: loginform,
+ 		success: function(data, textStatus, request){
+ 			alert('성공');
+ 		}
+ 	})
 });
 
