@@ -72,9 +72,9 @@
 			<div id="loginimage"><img src="/res/login.png"></div>
 			<div>
 				*보안을 위해 아이디와 비밀번호를 10만 글자까지 입력가능하게 했습니다. <br>
-				<form method="POST">
-					<input type="text" name="id" maxlength="100000" placeholder="아이디" style="width: 500px;"> <br>
-					<input type="password" name="password" maxlength="100000" placeholder="비밀번호" style="width: 500px"> <br>
+				<form method="POST" action="/login">
+					<input type="text" id="user" name="id" maxlength="100000" placeholder="아이디" style="width: 500px;"> <br>
+					<input type="password" id="pass" name="password" maxlength="100000" placeholder="비밀번호" style="width: 500px"> <br>
 					<input type="submit" value="로그인/가입" style="width:500px;margin-right:5px;">
 				</form>
 			</div>	

@@ -1,5 +1,26 @@
 express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
+var mysql = require('mysql');
+
+app.use(bodyParser.urlencoded({extended: false}));
+
+var connection = mysql.createConnection({
+	host: 'localhost',
+	port: 8080,
+	user: 'root',
+	password: 'qwerty',
+	database: 'games_page'
+});
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('mysql connection error');
+        console.error(err);
+        throw err;
+    }
+});
 
 
 app.get('/', function (req, res) {
@@ -42,7 +63,6 @@ app.get('/jquery', function (req, res){
 	res.sendfile( __dirname + '/front/jquery-1.11.1.js');
 });
 
-
 app.get('/res/logo.png', function (req, res){
 	res.sendfile( __dirname + '/front/res/logo.png');
 });
@@ -61,6 +81,22 @@ app.get('/jquery-ui.css', function (req, res){
 
 app.get('/jquery-ui.js', function (req, res){
 	res.sendfile( __dirname + '/front/jquery-ui.min.js');
+});
+
+app.post('/login', function (req, res){
+	var user = { 
+		id: req.body.id,
+		password: req.body.password
+	};
+	var query = connection.query('insert into user set ?',user,function (err, result){
+		if(err) {
+			console.log(err);
+			throw err;
+		}
+		console.log(query);
+		res.send(200,'success');
+	})
+	res.end('ok');
 });
 
 var server = app.listen(80, function () {
