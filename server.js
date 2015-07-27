@@ -96,7 +96,6 @@ app.post('/login', function (req, res){
 		console.log(query);
 		res.send(200,'success');
 	})
-	res.end('ok');
 });
 
 var server = app.listen(80, function () {
