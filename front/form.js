@@ -32,13 +32,13 @@ $(document).ready(function(){
  		$("#loginlayout").fadeOut(500);
  	});
 
- 	$.ajax({
- 		type: 'POST',
- 		url: '/login',
- 		data: loginform,
- 		success: function(data, textStatus, request){
- 			alert('성공');
- 		}
- 	})
+ 	// $.ajax({
+ 	// 	type: 'POST',
+ 	// 	url: '/login',
+ 	// 	data: loginform,
+ 	// 	success: function(data, textStatus, request){
+ 	// 		alert('성공');
+ 	// 	}
+ 	// })
 });
 
